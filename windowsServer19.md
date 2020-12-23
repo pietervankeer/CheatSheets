@@ -5,7 +5,7 @@
 | toetsen-combinatie | doel                               |
 | :----------------- | :--------------------------------- |
 | Windows + e        | opent explorer (windows verkenner) |
-| Windows + d        | verbeerg alle openstaande vensters |
+| Windows + d        | verberg alle openstaande vensters  |
 | Windows + r        | opent run                          |
 
 ## commando's in run
