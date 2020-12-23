@@ -10,13 +10,13 @@
 
 ## commando's in run
 
-| commando       | doel                                 |
-| :------------- | :----------------------------------- |
-| ncpa.cpl       | opent de netwerkadapters             |
-| services.mcs   | opent de services                    |
-| cmd.exe        | opent de command prompt              |
-| dca.msc        | Active directory users and computers |
-| compmngmnt.msc | Computer management                  |
+| commando     | doel                                 |
+| :----------- | :----------------------------------- |
+| ncpa.cpl     | opent de netwerkadapters             |
+| services.mcs | opent de services                    |
+| cmd.exe      | opent de command prompt              |
+| dca.msc      | Active directory users and computers |
+| compmgmt.msc | Computer management                  |
 
 ## back-up nemen van de (virtuele) harde schijf
 
