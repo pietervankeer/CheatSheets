@@ -1,6 +1,6 @@
 # Cheat sheet
 
-Dit zijn mijn persoonlijke cheatsheets. Van sommigen zijn ook [PDF's](~/PDF) gegenereert.
+Dit zijn mijn persoonlijke cheatsheets. Van sommigen zijn ook [PDF's](/PDF) gegenereert.
 
 - [Fedora](fedora-CLI.md)
 - [git (bash)](git.md)
