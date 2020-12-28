@@ -1,4 +1,6 @@
-## Markdown
+# Markdown
+
+## Syntax
 
 |         Doel         | Syntax              |
 | :------------------: | :------------------ |
