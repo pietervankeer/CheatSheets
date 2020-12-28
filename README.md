@@ -2,7 +2,7 @@
 
 Dit zijn mijn persoonlijke cheatsheets. Van sommigen zijn ook PDF's gegenereert.
 
-- [Fedora](fedora-cli.md)
+- [Fedora](fedora-CLI.md)
 - [git (bash)](git.md)
 - [Linux Shell](linuxShell.md)
 - [Markdown](markdown.md)
