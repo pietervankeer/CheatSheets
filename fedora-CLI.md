@@ -99,7 +99,7 @@ of
 
 ## Werken met tekst
 
-### Te kennen commando's:
+### Te kennen commando's
 
 | Commando | Doel                                                             |
 | :------- | :--------------------------------------------------------------- |
@@ -136,4 +136,3 @@ of
 | find / -type d > directorries.txt 2> /dev/null  | stderr "negeren"                    |
 | find / -type d > all.txt 2>&1                   | stdout en stderr samen wegschrijven |
 | sort < unsorted.txt > sorted.txt 2> errors.txt  | invoer en uitvoer omleiden          |
-
