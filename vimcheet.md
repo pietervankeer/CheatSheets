@@ -2,8 +2,8 @@
 
 ## Bestanden aanmaken
 
-```
-$ Vim naam_bestand
+```bash
+\$ Vim naam_bestand
 ```
 
 ## Van _normal mode_ naar _insert mode_?

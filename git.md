@@ -1,6 +1,6 @@
-## Git Bash
+# Git Bash
 
-### Zijn er changes?
+## Zijn er changes?
 
 ```console
 git status
@@ -8,20 +8,26 @@ git status
 
 ### Changes pushen
 
-1. Changes stagen
+Om code te pushen moet je minstens volgende stappen volgen:
 
-```console
+1. Changes stagen
+2. Commit maken
+3. Commit pushen
+
+#### Changes stagen
+
+```bash
 git add . ( '.' voor hele directory)
 ```
 
-2. Commit maken
+#### Commit maken
 
-```console
+```bash
 git commit -m "mijn beschrijving"
 ```
 
-3. Commit pushen
+#### Commit pushen
 
-```console
+```bash
 git push
 ```
