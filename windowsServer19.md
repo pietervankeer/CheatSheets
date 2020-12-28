@@ -1,4 +1,4 @@
-# Windows server 2019
+# Windows Server 2019
 
 ## Shortcuts
 
@@ -8,7 +8,7 @@
 | Windows + d        | verberg alle openstaande vensters  |
 | Windows + r        | opent run                          |
 
-## commando's in run
+## Commando's in run
 
 | commando     | doel                                 |
 | :----------- | :----------------------------------- |
@@ -18,6 +18,6 @@
 | dca.msc      | Active directory users and computers |
 | compmgmt.msc | Computer management                  |
 
-## back-up nemen van de (virtuele) harde schijf
+## Back-up nemen van de (virtuele) harde schijf
 
 Ga naar de locatie waar deze is opgeslagen en kopieer naar een gezipte map.
