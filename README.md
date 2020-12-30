@@ -4,7 +4,7 @@ Dit zijn mijn persoonlijke cheatsheets. Van sommigen zijn ook [PDF's](/PDF) gege
 
 - [Fedora](fedora-CLI.md)
 - [git (bash)](git.md)
-- [Linux Shell](linuxShell.md)
+- [Linux Shell](LinuxShell.md)
 - [Markdown](markdown.md)
 - [vim](vimcheet.md)
 - [Windows Server 2019](windowsServer19.md)
