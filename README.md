@@ -8,7 +8,7 @@ Dit zijn mijn persoonlijke cheatsheets. Van sommigen zijn ook [PDF's](/PDF) gege
 - [Markdown](markdown.md)
 - [vim](vimsheet.md)
 - [Windows Server 2019](windowsServer19.md)
-- [C#](C#-sheet.md)
+- [C#](C%23-sheet.md)
 
 ## Extension
 
