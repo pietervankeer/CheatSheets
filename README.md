@@ -6,8 +6,9 @@ Dit zijn mijn persoonlijke cheatsheets. Van sommigen zijn ook [PDF's](/PDF) gege
 - [git (bash)](git.md)
 - [Linux Shell](LinuxShell.md)
 - [Markdown](markdown.md)
-- [vim](vimcheet.md)
+- [vim](vimsheet.md)
 - [Windows Server 2019](windowsServer19.md)
+- [C#](C#-sheet.md)
 
 ## Extension
 
