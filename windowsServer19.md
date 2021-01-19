@@ -45,6 +45,52 @@ Laten genereren via de forward lookup zone **A-records** --> properties
 
 scope aanmaken en daarna (om in werking te treden) autoriseren en activeren
 
+### 5.2 Reservaties
+
+#### 5.2.1 Reservatie toevoegen
+
+**_Manueel_**
+
+via Server manager --> Tools --> DHCP --> Scope --> Reservations
+
+**_Powershell_**
+
+```powershell
+Add-DhcpServerv4Reservation -ClientId "F0-DE-F1-7A-00-5E" -IPAddress 10.10.10.8 -ScopeId "192.168.1.0" -Description "Reservatie voor printer" -Name "ReservatieNaam"
+```
+
+> _ClientId: mac-adress van de Client_
+
+> _Reservaties toevoegen vanuit een bestand:_
+>
+> ```powershell
+> Import-Csv -Path "Reservations.csv" | Add-DhcpServerv4Reservation -ComputerName "dhcpserver.contoso.com"
+> ```
+
+#### 5.2.2 Reservatie Bewerken
+
+**_Manueel_**
+
+via Server manager --> Tools --> DHCP --> Scope --> Reservations
+
+**_Powershell_**
+
+```powershell
+Set-DhcpServerv4Reservation -IPAddress 10.10.10.8 -Description "Reservatie voor een scanner" -Name nieuweReservatieNaam
+```
+
+#### 5.2.3 Reservatie Verwijderen
+
+**_Manueel_**
+
+via Server manager --> Tools --> DHCP --> Scope --> Reservations
+
+**_Powershell_**
+
+```powershell
+Remove-DhcpServerv4Reservation -IPAddress 10.10.10.8
+```
+
 ## H7: Gedeelde mappen
 
 ### 7.1 Shares bekijken
@@ -55,37 +101,37 @@ scope aanmaken en daarna (om in werking te treden) autoriseren en activeren
 
 ### 7.2 Shares aanmaken
 
-#### Manueel
+**_Manueel_**
 
 Via Computer management met _new share wizard_
 
-#### PowerShell
+**_Powershell_**
 
 ```powershell
-INSERT CODE HIER JA
+New-SmbShare -Name ShareNaam -Path F:\UserFolders
 ```
 
 ### 7.3 Shares verwijderen
 
-#### Manueel
+**_Manueel_**
 
 Via Computer management
 
-#### PowerShell
+**_Powershell_**
 
 ```powershell
-INSERT CODE HIER JA
+Remove-SmbShare -Name ShareNaam
 ```
 
 ## H8: Structureren van gebruikers
 
 ### 8.1 Aanmaken van OU's (Organisational Units)
 
-#### Manueel
+**_Manueel_**
 
 Via AD users and computers
 
-#### PowerShell
+**_Powershell_**
 
 Onderstaand commando maakt binnen de OU **Afdelingen** een nieuwe OU **Administratie**
 
@@ -95,37 +141,23 @@ New-ADOrganizationalUnit -Name "Administratie" -Path "ou=Afdelingen,DC=confidas,
 
 ### 8.2 Verwijderen OU
 
-#### Manueel
+**_Manueel_**
 
 Via AD users and computers
 
-#### PowerShell
+**_Powershell_**
 
 ```powershell
 Remove-ADOrganizationalUnit "ou=Administratie,ou=Afdelingen,DC=confidas,DC=local"
 ```
 
-### 8.1 Aanmaken van OU's (Organisational Units)
-
-#### Manueel
-
-Via AD users and computers
-
-#### PowerShell
-
-Onderstaand commando maakt binnen de OU **Afdelingen** een nieuwe OU **Administratie**
-
-```powershell
-New-ADOrganizationalUnit -Name "Administratie" -Path "ou=Afdelingen,DC=confidas,DC=local" -ProtectedFromAccidentalDeletion $False
-```
-
 ### 8.3 Aanmaken van Gebruikers
 
-#### Manueel
+**_Manueel_**
 
 Via AD users and computers
 
-#### PowerShell
+**_Powershell_**
 
 Onderstaand commando maakt binnen de OU **Afdelingen** een nieuwe OU **Administratie**
 
@@ -135,11 +167,11 @@ New-ADUser -Path "ou=Directie,ou=Afdelingen,DC=confidas,DC=local"  -Name "Joland
 
 ### 8.4 Verwijderen Gebruikers
 
-#### Manueel
+**_Manueel_**
 
 Via AD users and computers
 
-#### PowerShell
+**_Powershell_**
 
 ```powershell
 Remove-ADUser -Identity "CN=Jolanda Brands,OU=Directie,ou=afdelingen,DC=confidas,DC=local"
@@ -147,12 +179,12 @@ Remove-ADUser -Identity "CN=Jolanda Brands,OU=Directie,ou=afdelingen,DC=confidas
 
 ### 8.5 bewerken Gebruikers
 
-#### Manueel
+**_Manueel_**
 
 Via AD users and computers
 
-#### PowerShell
+**_Powershell_**
 
 ```powershell
-Remove-ADUser -Identity "CN=Jolanda Brands,OU=Directie,ou=afdelingen,DC=confidas,DC=local"
+Set-ADUser -Identity (CN=Jolanda Brands,OU=Directie,ou=afdelingen,DC=confidas,DC=local) -DisplayName "jolanda branden" -Manager (Madelief Smets)
 ```
