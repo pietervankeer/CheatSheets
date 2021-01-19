@@ -31,6 +31,44 @@ Ga naar de locatie waar deze is opgeslagen en kopieer naar een gezipte map.
 
 Een forward lookup zone wordt hoofdzakelijk gebruikt om DNS-namen (vb: **winserver1.confidas.local**) om te zetten naar een IP adres (vb: **192.168.1.1**). Hiervoor worden **A-records** gebruikt, maar je kan ook aliassen (**CNAME**-records) toevoegen
 
+#### 4.1.2 Records Toevoegen
+
+**_Powershell_**
+
+> _opgelet!_ Hieronder wordt een A-record aangemaakt
+
+```powershell
+Add-DnsServerResourceRecord -A -IPv4Address 172.18.99.33 -Name winserver1 -ZoneName confidas.local -CreatePtr
+```
+
+> _opgelet!_ Hieronder wordt een CNAME-record aangemaakt
+
+```powershell
+Add-DnsServerResourceRecord -CName -HostNameAlias winserver3 -Name winserver1 -ZoneName confidas.local
+```
+
+#### 4.1.3 Records Bewerken
+
+**_Powershell_**
+
+```powershell
+$OldObj = Get-DnsServerResourceRecord -Name "192.168.20.21" -ZoneName "confidas.local" -RRType "A"
+$NewObj = $OldObj.Clone()
+$NewObj.TimeToLive = [System.TimeSpan]::FromHours(2)
+Set-DnsServerResourceRecord -NewInputObject $NewObj -OldInputObject $OldObj -ZoneName "confidas.local"
+HostName                  RecordType Timestamp            TimeToLive      RecordData
+--------                  ---------- ---------            ----------      ----------
+Host01                       A          0                    02:00:00        2.2.2.2
+```
+
+#### 4.1.4 Records Verwijderen
+
+**_Powershell_**
+
+```powershell
+Remove-DnsServerResourceRecord -Name 192.168.20.21 -RRType A -ZoneName confidas.local
+```
+
 ### 4.2 Reverse Lookup Zone
 
 Een _Reverse Lookup Zone_ doet het omgekeerde als een _Forward Lookup Zone_, en wordt dus hoofdzakelijk gebruikt om aan de hand van een IP adres een hostname op te zoeken. Zo kan je via een reverse lookup zone achterhalen dat het IP-adres 192.168.1.1 behoort tot Winserver1.confidas.local. Hiervoor worden **PTR-records** gebruikt. De reverse lookup zone moeten we zelf nog aanmaken en configureren.
@@ -38,6 +76,12 @@ Een _Reverse Lookup Zone_ doet het omgekeerde als een _Forward Lookup Zone_, en 
 #### 4.2.1 **PTR-records** aanmaken
 
 Laten genereren via de forward lookup zone **A-records** --> properties
+
+**_Powershell_**
+
+```powershell
+Add-DnsServerResourceRecord -Name 192.168.20.21 -Ptr -PtrDomainName confidas.local -ZoneName confidas.local
+```
 
 ## H5: DHCP configuratie
 
@@ -59,9 +103,7 @@ via Server manager --> Tools --> DHCP --> Scope --> Reservations
 Add-DhcpServerv4Reservation -ClientId "F0-DE-F1-7A-00-5E" -IPAddress 10.10.10.8 -ScopeId "192.168.1.0" -Description "Reservatie voor printer" -Name "ReservatieNaam"
 ```
 
-> _ClientId: mac-adress van de Client_
-
-> _Reservaties toevoegen vanuit een bestand:_
+> _ClientId: mac-adress van de Client_ > _Reservaties toevoegen vanuit een bestand:_
 >
 > ```powershell
 > Import-Csv -Path "Reservations.csv" | Add-DhcpServerv4Reservation -ComputerName "dhcpserver.contoso.com"
