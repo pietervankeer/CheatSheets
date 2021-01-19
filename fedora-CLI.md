@@ -112,7 +112,7 @@ of
 | join     | voeg twee tekstbestanden samen adhv een gemeenschappelijke kolom |
 | nl       | voeg regelnummers toe                                            |
 | paste    | voeg twee tekstbestanden regel per regel samen                   |
-| sef      | veelzijdige tool voor bewerken van tekst (Stream Editor)         |
+| sed      | veelzijdige tool voor bewerken van tekst (Stream Editor)         |
 | trail    | toon de laatste regels van een tekstbestand                      |
 | tr       | zoek en vervang lettertekens in tekst                            |
 | uniq     | verwijder dubbele rijen uit een gesorteerd tekstbestand          |
