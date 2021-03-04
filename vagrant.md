@@ -1,30 +1,36 @@
 # Cheatsheet: Vagrant
 
-## status opvragen
+## initialize repository
+
+```
+vagrant init <name_of_box>
+```
+
+## Display status
 
 ```
 > vagrant status
 ```
 
-## VM opstarten
+## Starting the VM
 
 ```
 > vagrant up
 ```
 
-## VM opnieuw provisionen
+## Provision VM
 
 ```
 > vagrant provision
 ```
 
-## VM afsluiten
+## Shutdown VM
 
 ```
 > vagrant halt
 ```
 
-## vm verwijderen
+## Delete VM
 ```
 > vagrant destroy -f
 ```
