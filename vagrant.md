@@ -3,7 +3,7 @@
 ## initialize repository
 
 ```
-vagrant init <name_of_box>
+> vagrant init <name_of_box>
 ```
 
 ## Display status
