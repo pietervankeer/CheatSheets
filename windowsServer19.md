@@ -2,13 +2,33 @@
 
 ## Powershell
 
-| Taak    | Commando                                    |
-| :------ | :------------------------------------------ |
-| Hostame | `Rename-Computer -NewName NEWNAME -restart` |
+### Algemeen
+
+| Task         | Command                                     |
+| :----------- | :------------------------------------------ |
+| Set Hostname | `Rename-Computer -NewName NEWNAME -restart` |
 
 
+### Network
+
+| Task                         | Command                                                                                      |
+| :--------------------------- | :------------------------------------------------------------------------------------------- |
+| Get specific Network Adapter | `Get-NetAdapter -Name "Ethernet 2"`                                                          |
+| Get all Network Adapters     | `Get-NetAdapter -Name *`                                                                     |
+| Rename Network Adapter       | `Rename-NetAdapter -Name "Ethernet" -NewName "LAN"`                                          |
+| Disable ipv6                 | `Disable-NetAdapterBinding -Name "Adapter Name" -ComponentID ms_tcpip6`                      |
+| Set ipv4 address             | `New-NetIPAddress -InterfaceAlias "Adapter name" -IPAddress 192.168.1.2 -AddressFamily IPv4` |
 
 
+### Services
+
+| Taak            | Commando                                                                |
+| :-------------- | :---------------------------------------------------------------------- |
+| View service    | `Get-Service &#124; Where-Object name -eq "service name" | Format-List` |
+| Start service   | `Start-Service -Name name`                                              |
+| Stop service    | `Stop-Service -Name name`                                               |
+| Enable service  | `Set-service -Name "service name" -StartupType Automatic`               |
+| Disable service | `Set-service -Name "service name" -StartupType Disable`                 |
 
 
 ## Algemeen
