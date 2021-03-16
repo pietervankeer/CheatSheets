@@ -1,8 +1,17 @@
 # Git Bash
 
+|Task |COmmand|
+|:--- |:---   |
+| `git status` | zijn er changes? |
+| `git fetch` | changes fetchen van de server |
+|`git pull`| changes binnenhalen|
+|`git add . | --all | opdracht02/doc.txt`| change(s) stagen|
+|`git commit -m "je commit boodschap"`| commit maken|
+|`git push`| changes pushen|
+
 ## Zijn er changes?
 
-```console
+```bash
 git status
 ```
 
