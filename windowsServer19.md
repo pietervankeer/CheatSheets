@@ -1,5 +1,16 @@
 # Windows Server 2019
 
+## Powershell
+
+| Taak    | Commando                                    |
+| :------ | :------------------------------------------ |
+| Hostame | `Rename-Computer -NewName NEWNAME -restart` |
+
+
+
+
+
+
 ## Algemeen
 
 ### Shortcuts
