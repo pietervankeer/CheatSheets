@@ -9,13 +9,21 @@
 | `git commit -m "je commit boodschap"`    | commit maken                  |
 | `git push`                               | changes pushen                |
 
-
-## Workflow
+## Commit workflow
 
 ```bash
 git pull
 git status
 git add --all
-git commit -m "boodschap"
+git commit -m "message"
 git push
+```
+
+## Commit to new branch
+
+```bash
+git pull
+git branch -av # show branches that we have
+git checkout -b new_branch origin/existing_branch # make new local branch, based on existing branch
+git push -u origin new_branch # push new local branch to online repository
 ```
