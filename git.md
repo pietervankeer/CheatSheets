@@ -27,3 +27,4 @@ git branch -av # show branches that we have
 git checkout -b new_branch origin/existing_branch # make new local branch, based on existing branch
 git push -u origin new_branch # push new local branch to online repository
 ```
+> pushing to existing branch? `git push origin local_branch_name:remote_branch_name`
