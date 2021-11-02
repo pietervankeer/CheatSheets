@@ -1,36 +1,10 @@
 # Cheatsheet: Vagrant
 
-## initialize repository
-
-```
-> vagrant init <name_of_box>
-```
-
-## Display status
-
-```
-> vagrant status
-```
-
-## Starting the VM
-
-```
-> vagrant up
-```
-
-## Provision VM
-
-```
-> vagrant provision
-```
-
-## Shutdown VM
-
-```
-> vagrant halt
-```
-
-## Delete VM
-```
-> vagrant destroy -f
-```
+| Task                  | Command             |
+| :-------------------- | :------------------ |
+| Initialize repository | `vagrant init`      |
+| Current vm status     | `vagrant status`    |
+| Start vm              | `vagrant up`        |
+| Stop vm               | `vagrant halt`      |
+| Delete vm             | `vagrant destroy`   |
+| provision vm          | `vagrant provision` |
