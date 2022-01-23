@@ -5,16 +5,16 @@ Dit zijn mijn persoonlijke cheatsheets. Van sommigen zijn ook [PDF's](/PDF) gege
 ## contents
 
 - [Ansible](docs/ansible.md)
-- [docker](docs/docker.md)
+- [Docker](docs/docker.md)
 - [Powershell](docs/Powershell.md)
 - [Python](docs/python.md)
 - [Troubleshooting-checklist](docs/troubleshooting_checklist.md)
-- [vagrant](docs/vagrant.md)
+- [Vagrant](docs/vagrant.md)
 - [Fedora](docs/fedora-CLI.md)
-- [git (bash)](docs/git.md)
+- [Git (bash)](docs/git.md)
 - [Linux Shell](docs/LinuxShell.md)
 - [Markdown](docs/markdown.md)
-- [vim](docs/vimsheet.md)
+- [Vim](docs/vimsheet.md)
 - [Windows Server 2019](docs/windowsServer19.md)
 - [C#](docs/C%23-sheet.md)
 
