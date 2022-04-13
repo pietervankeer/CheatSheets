@@ -7,3 +7,5 @@
 | `r`     | rotate               |
 | `g`     | grab                 |
 | `o`     | proportional editing |
+
+> shift + a geeft menu om vormen in te laden.
